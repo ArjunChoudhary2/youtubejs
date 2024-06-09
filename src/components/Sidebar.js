@@ -1,5 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 const Sidebar = () => {
   const isVisible = useSelector((store) => store.menu.sideBarVisibility);
@@ -8,16 +9,19 @@ const Sidebar = () => {
   return (
     <div className="shadow-2xl h-screen w-48">
       <ul className="">
-        <li className="cursor-pointer w-full p-2 flex justify-between items-center hover:bg-slate-200">
-          <div className="w-1/6 mx-2">
-            <img
-              className="h-6 rounded-full"
-              alt="home"
-              src="https://e7.pngegg.com/pngimages/703/597/png-clipart-logo-house-home-house-angle-building.png"
-            />
-          </div>
-          <div className="w-5/6 ml-3">Home</div>
-        </li>
+        <Link to="/">
+          <li className="cursor-pointer w-full p-2 flex justify-between items-center hover:bg-slate-200">
+            <div className="w-1/6 mx-2">
+              <img
+                className="h-6 rounded-full"
+                alt="home"
+                src="https://e7.pngegg.com/pngimages/703/597/png-clipart-logo-house-home-house-angle-building.png"
+              />
+            </div>
+            <div className="w-5/6 ml-3">Home</div>
+          </li>
+        </Link>
+
         <li className="cursor-pointer w-full p-2 flex justify-between items-center hover:bg-slate-200">
           <div className="w-1/6 mx-2">
             <img

@@ -1,13 +1,16 @@
-import React from 'react';
-import Sidebar from './Sidebar';
+import React from "react";
+import Sidebar from "./Sidebar";
+import { Outlet } from "react-router-dom";
 
 const Body = () => {
   return (
-    <div className='flex'>
-      <Sidebar/>
-      <div>Body</div>
-    </div>
+    <>
+      <div className="flex overflow-x-hidden">
+        <Sidebar />
+        <Outlet/>
+      </div>
+    </>
   );
-}
+};
 
 export default Body;

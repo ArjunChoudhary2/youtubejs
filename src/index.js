@@ -3,11 +3,34 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Error from "./components/Error";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Main from "./components/Main";
+import Watch from "./components/Watch";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+    errorElement: <Error />,
+    children: [
+      {
+        path: "/",
+        element: <Main />,
+      },
+      {
+        path: "watch",
+        element: <Watch />,
+      },
+    ],
+  },
+]);
+
+
 root.render(
   <>
-    <App />
+    <RouterProvider router={router} />
   </>
 );
 

@@ -1,12 +1,13 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { toggle } from "../store/menuSlice";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const dispatch = useDispatch();
   const handleSidebar = () => {
-    dispatch(toggle())
-  }
+    dispatch(toggle());
+  };
 
   return (
     <div className="shadow-lg h-16 flex items-center">
@@ -17,11 +18,13 @@ const Header = () => {
           alt="menu"
           onClick={handleSidebar}
         />
-        <img
-          className="h-5 mx-2"
-          src="https://upload.wikimedia.org/wikipedia/commons/3/34/YouTube_logo_%282017%29.png"
-          alt="logo"
-        />
+        <Link to='/'>
+          <img
+            className="h-5 mx-2"
+            src="https://upload.wikimedia.org/wikipedia/commons/3/34/YouTube_logo_%282017%29.png"
+            alt="logo"
+          />
+        </Link>
       </div>
     </div>
   );
