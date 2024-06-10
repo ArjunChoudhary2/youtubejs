@@ -13,8 +13,11 @@ const menuSlice = createSlice({
     close(state){
       state.sideBarVisibility = false;
     },
+    open(state){
+      state.sideBarVisibility = true;
+    }
   },
 });
 
-export const { toggle,close } = menuSlice.actions;
+export const { toggle,close, open } = menuSlice.actions;
 export default menuSlice.reducer;

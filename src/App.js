@@ -7,10 +7,12 @@ import store from "./store/store";
 
 const App = () => {
   return (
-    <Provider store={store}>
-      <Header />
-      <Body />
-    </Provider>
+    <div className="overflow-x-hidden w-full">
+      <Provider store={store}>
+        <Header />
+        <Body />
+      </Provider>
+    </div>
   );
 };
 

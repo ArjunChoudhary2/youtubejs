@@ -8,7 +8,7 @@ const VideoCard = ({ info }) => {
     const { viewCount } = statistics;
   
     return (
-      <div className="w-80 mx-2">
+      <div className=" w-[310px] mx-2">
         <Link to={"watch/?v=" + info.id}>
           <img src={thumbnails.medium.url} alt={title} className="rounded-lg" />
           <div className="font-bold text-sm">{title}</div>
